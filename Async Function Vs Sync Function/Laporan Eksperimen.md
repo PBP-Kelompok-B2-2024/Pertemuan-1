@@ -1,5 +1,6 @@
 # Meningkatkan Efisiensi Pemrosesan File Log dalam Aplikasi Server Menggunakan Async Function
-
+### Penanggung Jawab : Muhammad Zaky Aliyashfi
+### Link chatGPT : https://chatgpt.com/share/06cf056a-607c-42f0-bb36-cac5bed8ac93
 ## Deskripsi Eksperimen
 Eksperimen ini bertujuan untuk mengevaluasi peningkatan efisiensi dan responsivitas aplikasi server saat memproses file log menggunakan async function dibandingkan dengan metode sinkron. Dalam konteks aplikasi server yang harus menangani banyak operasi I/O secara bersamaan, eksperimen ini mencoba membuktikan bahwa penggunaan async function dapat mengurangi waktu eksekusi dan meningkatkan kemampuan server untuk tetap responsif.
 
