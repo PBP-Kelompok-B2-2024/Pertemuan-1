@@ -1,0 +1,5 @@
+2023-10-03 08:30:00 INFO  Server started on port 7070
+2023-10-03 08:31:15 INFO  User logout: guest
+2023-10-03 08:32:40 WARN  CPU temperature high
+2023-10-03 08:33:55 ERROR Network timeout
+2023-10-03 08:34:20 INFO  Server maintenance mode enabled
