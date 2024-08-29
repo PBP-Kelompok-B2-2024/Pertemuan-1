@@ -1,41 +1,32 @@
-# **Perbandingan Kinerja antara Pemrograman Synchronous dan Asynchronous dalam Konteks Event Handling**
+# **Evaluasi Kinerja Event Handling dalam Pemrograman Synchronous vs Asynchronous pada Halaman Produk Website dengan Fitur Pemeriksaan Stok**
 ### Penanggung Jawab : Alya Naila Putri Ashadilla
 ### Link chatGPT : https://chatgpt.com/share/abe1eb16-3fbc-4f7d-bc1a-c44939832c2b
-### **Judul Problem**
-**Perbandingan Kinerja Pemrograman Synchronous dan Asynchronous dalam Menangani Event Handling pada Fitur Pemeriksaan Ketersediaan Stok di Berbagai Gudang**
-
 ### **Deskripsi Eksperimen**
-Eksperimen ini bertujuan untuk membandingkan kinerja antara pemrograman synchronous dan asynchronous dalam konteks event handling pada fitur aplikasi yang memeriksa ketersediaan stok produk di berbagai gudang. Tujuannya adalah untuk menentukan metode mana yang lebih efisien dalam menyelesaikan tugas-tugas pemrosesan stok ketika pengguna memasukkan jumlah produk yang ingin dibeli.
+Eksperimen ini bertujuan untuk membandingkan kinerja antara pemrograman synchronous dan asynchronous dalam konteks fitur pemeriksaan ketersediaan stok pada halaman produk sebuah website. Tujuan eksperimen adalah untuk mengukur dan menganalisis waktu eksekusi dari kedua pendekatan dalam menangani simulasi proses lambat dan menentukan mana yang lebih efisien dalam konteks ini.
 
 ### **Identifikasi Problem**
-**Konteks Permasalahan:**
-Dalam aplikasi e-commerce, pengguna dapat memasukkan jumlah produk yang ingin dibeli, dan sistem perlu memeriksa ketersediaan stok di berbagai gudang secara real-time untuk memastikan produk yang dipesan tersedia.
-
-**Permasalahan:**
-Terdapat kebutuhan untuk menentukan apakah pemrograman synchronous atau asynchronous lebih efisien untuk memproses informasi ketersediaan stok, terutama ketika menangani operasi yang memerlukan waktu atau delay.
-
-**Solusi:**
-Menerapkan dua pendekatan pemrograman—synchronous dan asynchronous—untuk memeriksa ketersediaan stok dan mengukur waktu eksekusi dari masing-masing pendekatan untuk menentukan metode yang paling efisien.
+- **Konteks Permasalahan:** Website e-commerce dengan halaman produk memerlukan fitur untuk memeriksa ketersediaan stok dari beberapa gudang secara bersamaan.
+- **Permasalahan:** Bagaimana pemrograman synchronous dan asynchronous mempengaruhi waktu eksekusi dan responsivitas saat memeriksa ketersediaan stok, terutama ketika ada simulasi proses lambat.
+- **Solusi:** Mengimplementasikan dan membandingkan dua pendekatan pemrograman (synchronous dan asynchronous) untuk menentukan metode yang lebih efisien dalam konteks fitur pemeriksaan stok.
 
 ### **Metodologi Eksperimen**
-1. **Persiapan Kode:**
-   - Implementasikan fungsi pemeriksaan stok menggunakan pemrograman synchronous yang memproses setiap gudang secara berurutan.
-   - Implementasikan fungsi pemeriksaan stok menggunakan pemrograman asynchronous dengan promises dan `setTimeout` untuk mensimulasikan delay.
+1. **Implementasi Synchronous:**
+   - Menyusun fungsi pemeriksaan stok yang dilakukan secara berurutan.
+   - Menggunakan simulasi proses lambat untuk masing-masing gudang.
+   - Mengukur waktu eksekusi dengan mencatat waktu mulai dan selesai.
 
-2. **Pengukuran Waktu:**
-   - Untuk synchronous, ukur waktu eksekusi dengan mencatat waktu mulai dan selesai.
-   - Untuk asynchronous, ukur waktu eksekusi setelah semua promises selesai dan hitung waktu totalnya.
+2. **Implementasi Asynchronous:**
+   - Menyusun fungsi pemeriksaan stok yang dilakukan secara bersamaan menggunakan promises dan `setTimeout`.
+   - Menggunakan simulasi proses lambat dengan delay yang ditentukan.
+   - Mengukur waktu eksekusi setelah semua promises selesai.
 
-3. **Uji Coba dan Observasi:**
-   - Jalankan kedua pendekatan dengan simulasi proses lambat dan amati waktu eksekusi masing-masing.
-   - Bandingkan hasil waktu eksekusi antara synchronous dan asynchronous.
+3. **Pengukuran dan Analisis:**
+   - Membandingkan waktu eksekusi antara kedua pendekatan.
+   - Menganalisis hasil untuk menentukan apakah asynchronous memberikan keuntungan dalam hal waktu eksekusi dan responsivitas.
 
 ### **Hasil Eksperimen**
-- **Synchronous Programming:** Memproses ketersediaan stok secara berurutan dengan waktu eksekusi yang lebih singkat. Waktu eksekusi total lebih cepat dibandingkan dengan pendekatan asynchronous dalam eksperimen ini.
-- **Asynchronous Programming:** Memproses ketersediaan stok secara bersamaan menggunakan promises dan `setTimeout`, namun memerlukan waktu lebih lama dibandingkan dengan synchronous. Ini disebabkan oleh overhead tambahan dari promises dan event loop, serta delay simulasi yang mempengaruhi hasil waktu eksekusi.
+- **Synchronous Programming:** Hasil eksperimen menunjukkan bahwa metode synchronous, yang memproses tugas satu per satu secara berurutan, memiliki waktu eksekusi lebih cepat dibandingkan dengan asynchronous.
+- **Asynchronous Programming:** Meskipun metode asynchronous dirancang untuk meningkatkan efisiensi dengan memproses tugas secara bersamaan, hasil eksperimen menunjukkan bahwa metode ini memerlukan waktu lebih lama. Hal ini mungkin disebabkan oleh overhead tambahan dari event loop dan promises.
 
 ### **Kesimpulan**
-Eksperimen menunjukkan bahwa dalam konteks aplikasi ini, pemrograman synchronous lebih cepat daripada pemrograman asynchronous. Hal ini disebabkan oleh overhead tambahan dari promises dan event loop dalam asynchronous programming serta jenis tugas yang lebih cocok untuk synchronous programming dalam kasus ini. 
-
-**Kesimpulan Kesesuaian Output:**
-Eksperimen ini memberikan pemahaman bahwa pemilihan metode pemrograman harus disesuaikan dengan konteks dan jenis tugas yang dihadapi. Untuk tugas-tugas CPU-bound atau yang memerlukan pemrosesan cepat, synchronous programming dapat lebih efisien. Sebaliknya, untuk operasi I/O-bound atau ketika menangani banyak tugas secara bersamaan, asynchronous programming dapat memberikan keuntungan yang lebih besar.
+Eksperimen ini menunjukkan bahwa dalam konteks pemeriksaan ketersediaan stok dengan simulasi proses lambat, metode synchronous lebih cepat daripada metode asynchronous. Meskipun asynchronous programming memiliki potensi untuk meningkatkan efisiensi dalam situasi I/O-bound atau dengan banyak operasi bersamaan, overhead tambahan dari promises dan event loop dalam kasus ini menyebabkan metode synchronous lebih efisien. Eksperimen ini berhasil mencapai tujuannya dengan memberikan wawasan yang berguna mengenai kapan dan bagaimana masing-masing pendekatan pemrograman sebaiknya digunakan. Hasil ini menunjukkan bahwa pemilihan metode pemrograman harus mempertimbangkan jenis tugas dan overhead yang terkait.
