@@ -5,6 +5,20 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "SyncAPIClientWithExceptionHandling",
+            "request": "launch",
+            "mainClass": "SyncAPIClientWithExceptionHandling",
+            "projectName": "Pertemuan-1_24f67abe"
+        },
+        {
+            "type": "java",
+            "name": "AsyncAPIClientWithExceptionHandling",
+            "request": "launch",
+            "mainClass": "AsyncAPIClientWithExceptionHandling",
+            "projectName": "Pertemuan-1_24f67abe"
+        },
+        {
             "name": "Source Code",
             "cwd": "ReactiveX\\Source Code",
             "request": "launch",

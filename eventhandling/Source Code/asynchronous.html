@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous Stock Checker</title>
+    <style>
+        #resultsAsync, #executionTimeAsync {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Warehouse Stock Checker - Asynchronous</h1>
+
+    <label for="quantity">Enter Quantity:</label>
+    <input type="number" id="quantity" value="7">
+    <button id="checkStockBtnAsync">Check Stock Asynchronously</button>
+
+    <div id="resultsAsync"></div>
+    <div id="executionTimeAsync"></div>
+
+    <script>
+        function checkStockAsynchronouslyWithEventHandling(quantity) {
+            document.getElementById('checkStockBtnAsync').addEventListener('click', function() {
+                const startTime = performance.now();
+
+                function checkWarehouse1(qty) {
+                    return new Promise((resolve) => {
+                        setTimeout(() => {
+                            resolve(qty <= 10 ? "Available in Warehouse 1" : "Out of stock in Warehouse 1");
+                        }, 2000); // Simulasi delay 2 detik
+                    });
+                }
+
+                function checkWarehouse2(qty) {
+                    return new Promise((resolve) => {
+                        setTimeout(() => {
+                            resolve(qty <= 15 ? "Available in Warehouse 2" : "Out of stock in Warehouse 2");
+                        }, 3000); // Simulasi delay 3 detik
+                    });
+                }
+
+                function checkWarehouse3(qty) {
+                    return new Promise((resolve) => {
+                        setTimeout(() => {
+                            resolve(qty <= 5 ? "Available in Warehouse 3" : "Out of stock in Warehouse 3");
+                        }, 1000); // Simulasi delay 1 detik
+                    });
+                }
+
+                Promise.all([checkWarehouse1(quantity), checkWarehouse2(quantity), checkWarehouse3(quantity)])
+                    .then((results) => {
+                        document.getElementById('resultsAsync').innerText = results.join('\n');
+                        const endTime = performance.now();
+                        const executionTime = endTime - startTime;
+                        document.getElementById('executionTimeAsync').innerText = `Execution Time: ${executionTime.toFixed(2)} ms`;
+                    })
+                    .catch((error) => {
+                        console.error("Error checking stock:", error);
+                    });
+            });
+        }
+
+        // Pengguna memasukkan jumlah produk yang ingin dibeli dan menekan tombol "Check Stock"
+        checkStockAsynchronouslyWithEventHandling(7);
+    </script>
+
+</body>
+</html>
