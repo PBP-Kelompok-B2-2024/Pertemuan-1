@@ -1,29 +1,41 @@
 # **Perbandingan Kinerja antara Pemrograman Synchronous dan Asynchronous dalam Konteks Event Handling**
 ### Penanggung Jawab : Alya Naila Putri Ashadilla
 ### Link chatGPT : https://chatgpt.com/share/abe1eb16-3fbc-4f7d-bc1a-c44939832c2b
-## **Deskripsi Eksperimen**
-Eksperimen ini bertujuan untuk membandingkan kinerja antara pemrograman synchronous dan asynchronous dalam konteks pengolahan stok barang di beberapa gudang. Fokus utama dari eksperimen ini adalah untuk mengevaluasi waktu eksekusi kedua pendekatan pemrograman dan melihat apakah asynchronous programming memberikan keuntungan dibandingkan dengan synchronous programming dalam kasus yang melibatkan simulasi proses lambat.
+### **Judul Problem**
+**Perbandingan Kinerja Pemrograman Synchronous dan Asynchronous dalam Menangani Event Handling pada Fitur Pemeriksaan Ketersediaan Stok di Berbagai Gudang**
 
-## **Identifikasi Problem**
-- **Konteks Permasalahan:** Dalam banyak aplikasi industri, pemrograman asynchronous sering dipilih untuk mengelola tugas-tugas I/O-bound secara lebih efisien. Namun, ada situasi di mana synchronous programming mungkin lebih efisien, terutama untuk tugas-tugas CPU-bound atau proses cepat.
-- **Permasalahan:** Perbedaan kinerja antara synchronous dan asynchronous programming dalam tugas yang melibatkan simulasi proses lambat. Kinerja yang diukur dengan menggunakan simulasi delay untuk menilai apakah asynchronous programming benar-benar memberikan keuntungan dalam konteks ini.
-- **Solusi:** Untuk mengidentifikasi apakah asynchronous programming lebih cepat atau lambat dibandingkan dengan synchronous programming, dilakukan eksperimen dengan membandingkan waktu eksekusi dari kedua pendekatan untuk tugas yang sama.
+### **Deskripsi Eksperimen**
+Eksperimen ini bertujuan untuk membandingkan kinerja antara pemrograman synchronous dan asynchronous dalam konteks event handling pada fitur aplikasi yang memeriksa ketersediaan stok produk di berbagai gudang. Tujuannya adalah untuk menentukan metode mana yang lebih efisien dalam menyelesaikan tugas-tugas pemrosesan stok ketika pengguna memasukkan jumlah produk yang ingin dibeli.
 
-## **Metodologi Eksperimen**
-1. **Implementasi Kode:**
-   - **Synchronous Programming:** Implementasi fungsi yang memeriksa ketersediaan stok secara berurutan, dengan simulasi proses lambat menggunakan loop.
-   - **Asynchronous Programming:** Implementasi fungsi yang memeriksa ketersediaan stok secara bersamaan menggunakan promises dan `setTimeout` untuk mensimulasikan delay.
+### **Identifikasi Problem**
+**Konteks Permasalahan:**
+Dalam aplikasi e-commerce, pengguna dapat memasukkan jumlah produk yang ingin dibeli, dan sistem perlu memeriksa ketersediaan stok di berbagai gudang secara real-time untuk memastikan produk yang dipesan tersedia.
+
+**Permasalahan:**
+Terdapat kebutuhan untuk menentukan apakah pemrograman synchronous atau asynchronous lebih efisien untuk memproses informasi ketersediaan stok, terutama ketika menangani operasi yang memerlukan waktu atau delay.
+
+**Solusi:**
+Menerapkan dua pendekatan pemrograman—synchronous dan asynchronous—untuk memeriksa ketersediaan stok dan mengukur waktu eksekusi dari masing-masing pendekatan untuk menentukan metode yang paling efisien.
+
+### **Metodologi Eksperimen**
+1. **Persiapan Kode:**
+   - Implementasikan fungsi pemeriksaan stok menggunakan pemrograman synchronous yang memproses setiap gudang secara berurutan.
+   - Implementasikan fungsi pemeriksaan stok menggunakan pemrograman asynchronous dengan promises dan `setTimeout` untuk mensimulasikan delay.
 
 2. **Pengukuran Waktu:**
-   - **Synchronous:** Mengukur waktu eksekusi dengan `performance.now()` dari awal hingga akhir proses.
-   - **Asynchronous:** Mengukur waktu eksekusi setelah semua promises selesai dengan `performance.now()`.
+   - Untuk synchronous, ukur waktu eksekusi dengan mencatat waktu mulai dan selesai.
+   - Untuk asynchronous, ukur waktu eksekusi setelah semua promises selesai dan hitung waktu totalnya.
 
-3. **Analisis Data:**
-   - Membandingkan waktu eksekusi antara synchronous dan asynchronous programming untuk mengevaluasi kinerja relatif kedua pendekatan.
+3. **Uji Coba dan Observasi:**
+   - Jalankan kedua pendekatan dengan simulasi proses lambat dan amati waktu eksekusi masing-masing.
+   - Bandingkan hasil waktu eksekusi antara synchronous dan asynchronous.
 
-## **Hasil Eksperimen**
-- **Synchronous Programming:** Waktu eksekusi untuk tugas-tugas yang dilakukan secara berurutan. Hasil menunjukkan bahwa synchronous programming lebih cepat dalam konteks eksperimen ini.
-- **Asynchronous Programming:** Waktu eksekusi untuk tugas-tugas yang dilakukan secara bersamaan dengan promises dan `setTimeout`. Hasil menunjukkan bahwa asynchronous programming memerlukan waktu lebih lama dibandingkan dengan synchronous.
+### **Hasil Eksperimen**
+- **Synchronous Programming:** Memproses ketersediaan stok secara berurutan dengan waktu eksekusi yang lebih singkat. Waktu eksekusi total lebih cepat dibandingkan dengan pendekatan asynchronous dalam eksperimen ini.
+- **Asynchronous Programming:** Memproses ketersediaan stok secara bersamaan menggunakan promises dan `setTimeout`, namun memerlukan waktu lebih lama dibandingkan dengan synchronous. Ini disebabkan oleh overhead tambahan dari promises dan event loop, serta delay simulasi yang mempengaruhi hasil waktu eksekusi.
 
-## **Kesimpulan**
-Eksperimen ini menunjukkan bahwa dalam kasus yang melibatkan simulasi proses lambat, synchronous programming dapat memberikan waktu eksekusi yang lebih cepat dibandingkan dengan asynchronous programming. Ini menggarisbawahi bahwa asynchronous programming memiliki overhead tambahan dari event loop dan promises yang mungkin tidak sebanding dengan keuntungan untuk tugas-tugas yang cepat atau CPU-bound. Eksperimen ini sesuai dengan tujuan untuk mengevaluasi kinerja kedua pendekatan pemrograman dan memberikan wawasan tentang kapan sebaiknya menggunakan synchronous atau asynchronous programming tergantung pada jenis tugas dan konteks aplikasinya.
+### **Kesimpulan**
+Eksperimen menunjukkan bahwa dalam konteks aplikasi ini, pemrograman synchronous lebih cepat daripada pemrograman asynchronous. Hal ini disebabkan oleh overhead tambahan dari promises dan event loop dalam asynchronous programming serta jenis tugas yang lebih cocok untuk synchronous programming dalam kasus ini. 
+
+**Kesimpulan Kesesuaian Output:**
+Eksperimen ini memberikan pemahaman bahwa pemilihan metode pemrograman harus disesuaikan dengan konteks dan jenis tugas yang dihadapi. Untuk tugas-tugas CPU-bound atau yang memerlukan pemrosesan cepat, synchronous programming dapat lebih efisien. Sebaliknya, untuk operasi I/O-bound atau ketika menangani banyak tugas secara bersamaan, asynchronous programming dapat memberikan keuntungan yang lebih besar.
