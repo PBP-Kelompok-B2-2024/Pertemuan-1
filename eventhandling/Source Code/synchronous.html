@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synchronous Stock Checker</title>
+    <style>
+        #resultsSync, #executionTimeSync {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Warehouse Stock Checker - Synchronous</h1>
+
+    <label for="quantity">Enter Quantity:</label>
+    <input type="number" id="quantity" value="7">
+    <button id="checkStockBtnSync">Check Stock Synchronously</button>
+
+    <div id="resultsSync"></div>
+    <div id="executionTimeSync"></div>
+
+    <script>
+        function checkStockSynchronouslyWithEventHandling(quantity) {
+            document.getElementById('checkStockBtnSync').addEventListener('click', function() {
+                const startTime = performance.now();
+
+                let warehouse1 = checkWarehouse1(quantity);
+                let warehouse2 = checkWarehouse2(quantity);
+                let warehouse3 = checkWarehouse3(quantity);
+
+                function checkWarehouse1(qty) {
+                    for (let i = 0; i < 1e9; i++) {} // Simulasi proses lambat
+                    return qty <= 10 ? "Available in Warehouse 1" : "Out of stock in Warehouse 1";
+                }
+
+                function checkWarehouse2(qty) {
+                    for (let i = 0; i < 1e9; i++) {} // Simulasi proses lambat
+                    return qty <= 15 ? "Available in Warehouse 2" : "Out of stock in Warehouse 2";
+                }
+
+                function checkWarehouse3(qty) {
+                    for (let i = 0; i < 1e9; i++) {} // Simulasi proses lambat
+                    return qty <= 5 ? "Available in Warehouse 3" : "Out of stock in Warehouse 3";
+                }
+
+                // Menampilkan hasil setelah semua pemeriksaan selesai
+                document.getElementById('resultsSync').innerText = `${warehouse1}\n${warehouse2}\n${warehouse3}`;
+
+                const endTime = performance.now();
+                const executionTime = endTime - startTime;
+                document.getElementById('executionTimeSync').innerText = `Execution Time: ${executionTime.toFixed(2)} ms`;
+            });
+        }
+
+        // Pengguna memasukkan jumlah produk yang ingin dibeli dan menekan tombol "Check Stock"
+        checkStockSynchronouslyWithEventHandling(7);
+    </script>
+
+</body>
+</html>
