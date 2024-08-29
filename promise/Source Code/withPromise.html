@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Produk Dengan Promise</title>
+</head>
+<body>
+    <h1>Data Produk Dengan Promise</h1>
+    <div id="output"></div>
+    <script>
+        function fetchData() {
+            // Simulasi pengambilan data dari server
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(["Produk 1", "Produk 2", "Produk 3"]);
+                }, 1000);
+            });
+        }
+
+        function processData(data) {
+            // Simulasi pemrosesan data
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(data.map(item => item + " Diproses"));
+                }, 1000);
+            });
+        }
+
+        function displayData(data) {
+            const output = document.getElementById('output');
+            output.innerHTML = '<ul>' + data.map(item => `<li>${item}</li>`).join('') + '</ul>';
+        }
+
+        fetchData()
+            .then(data => processData(data))
+            .then(processedData => displayData(processedData))
+            .catch(error => console.error(error));
+    </script>
+</body>
+</html>
