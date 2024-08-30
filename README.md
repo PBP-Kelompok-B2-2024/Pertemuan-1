@@ -17,6 +17,9 @@ Pada pertemuan pertama perkuliahan Prinsip Bahasa Pemrograman Praktik, kami memi
 
 Sebaliknya, **asynchronous** programming memungkinkan tugas-tugas untuk dieksekusi tanpa harus menunggu tugas lainnya selesai. Dengan kata lain, kode dapat melanjutkan eksekusinya sambil menunggu tugas yang membutuhkan waktu lama untuk diselesaikan. Ini dicapai melalui berbagai mekanisme seperti callbacks, promises, dan async/await, yang memungkinkan penanganan operasi I/O dan tugas-tugas lain yang memakan waktu secara lebih efisien.
 
+## Alasan mempelajari asynchronous dan synchronous programming 
+Bertujuan untuk memahami cara kerja aplikasi dalam menangani tugas secara efisien. Asynchronous programming memungkinkan aplikasi melakukan banyak tugas sekaligus, meningkatkan responsivitas dan mengurangi waktu tunggu. Di sisi lain, synchronous programming, meskipun lebih sederhana, digunakan ketika tugas-tugas harus dilakukan berurutan tanpa interupsi.
+
 ## Manfaat Penerapan Asynchronous Programming
 Penerapan asynchronous programming memiliki beberapa manfaat signifikan:
 
@@ -34,6 +37,9 @@ Tidak menerapkan asynchronous programming, terutama dalam konteks di mana banyak
 - Penggunaan Resource yang Tidak Efisien: Tanpa asynchronous programming, aplikasi mungkin memerlukan lebih banyak resource untuk menangani jumlah tugas yang sama, karena setiap tugas harus menunggu giliran untuk dieksekusi.
 
 - Skalabilitas Terbatas: Program yang hanya menggunakan synchronous programming dapat menghadapi kesulitan dalam menangani banyak permintaan atau proses sekaligus, membatasi kemampuan aplikasi untuk berkembang dan beradaptasi dengan kebutuhan pengguna.
+
+## Penerapan asynchronous programming di industri
+Penerapan asynchronous programming di industri sangat penting, terutama dalam aplikasi web, mobile, dan sistem real-time seperti layanan streaming dan game online. Asynchronous programming memungkinkan aplikasi menangani banyak permintaan pengguna sekaligus tanpa penundaan, menjaga performa dan responsivitas yang tinggi, yang sangat penting dalam lingkungan dengan lalu lintas data yang tinggi.
 
 ## Eksperimen Yang Dilakukan
 Dari tema besar Asynchronous vs Synchronous programming ini, ada beberapa topik yang kami ambil untuk dilakukan eksperimen ini, diantaranya :
