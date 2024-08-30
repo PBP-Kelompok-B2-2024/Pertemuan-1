@@ -1,5 +1,5 @@
 # Peningkatan Pengelolaan Data Asinkron dalam Aplikasi dengan Menggunakan ReactiveX di Bahasa Pemrograman Dart
-
+### Tanggal Eksperimen : 26 Agustus 2024
 ### Penanggung Jawab : Yahya Alfon Sinaga
 
 ### Link chatGPT : <https://chatgpt.com/share/828f4403-d203-4b4e-91a7-10cf3495fde7>

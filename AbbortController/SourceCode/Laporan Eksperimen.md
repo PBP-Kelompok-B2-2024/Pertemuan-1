@@ -1,6 +1,7 @@
 # **Membatalkan Permintaan HTTP yang Tidak Diperlukan untuk Meningkatkan Responsivitas Aplikasi***
-## Penanggung Jawab : Muhammad Samudera Bagja
-## LinkChatGPT      : https://chatgpt.com/c/674c8534-a64c-453e-b33e-6d5bd9ae5943
+### Tanggal Eksperimen : 30 Agustus 2024
+### Penanggung Jawab : Muhammad Samudera Bagja
+### LinkChatGPT      : https://chatgpt.com/c/674c8534-a64c-453e-b33e-6d5bd9ae5943
 
 ### 1. Identifikasi Problem
 **Problem Identifikasi** adalah situasi di mana aplikasi web melakukan permintaan HTTP (seperti `fetch`) ke API eksternal. Jika pengguna melakukan tindakan yang menyebabkan permintaan menjadi tidak relevan (misalnya, berpindah halaman), permintaan tersebut tetap berjalan hingga selesai, meskipun tidak diperlukan. Hal ini dapat mengakibatkan penggunaan bandwidth dan resource yang tidak efisien serta menurunkan responsivitas aplikasi.

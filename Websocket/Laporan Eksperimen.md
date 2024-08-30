@@ -1,5 +1,5 @@
 # Efisiensi Komunikasi Real-Time di Aplikasi Monitoring Produksi dengan Penerapan WebSocket
-
+### Tanggal Eksperimen : 27 Agustus 2024
 ### Penanggung Jawab : Yahya Alfon Sinaga
 
 ### Link chatGPT : <https://chatgpt.com/share/b32c08d5-2bc3-401d-8b5b-5bd4f6e0e427>

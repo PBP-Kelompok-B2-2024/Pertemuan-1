@@ -1,6 +1,7 @@
 # **Evaluasi Kinerja Event Handling dalam Pemrograman Synchronous vs Asynchronous pada Halaman Produk Website dengan Fitur Pemeriksaan Stok**
-## Penanggung Jawab : Alya Naila Putri Ashadilla
-## Link chatGPT : https://chatgpt.com/share/abe1eb16-3fbc-4f7d-bc1a-c44939832c2b
+### Tanggal Eksperimen : 29 Agustus 2024
+### Penanggung Jawab : Alya Naila Putri Ashadilla
+### Link chatGPT : https://chatgpt.com/share/abe1eb16-3fbc-4f7d-bc1a-c44939832c2b
 ## **Deskripsi Eksperimen**
 Eksperimen ini bertujuan untuk membandingkan kinerja antara pemrograman synchronous dan asynchronous dalam konteks fitur pemeriksaan ketersediaan stok pada halaman produk sebuah website. Tujuan eksperimen adalah untuk mengukur dan menganalisis waktu eksekusi dari kedua pendekatan dalam menangani simulasi proses lambat dan menentukan mana yang lebih efisien dalam konteks ini.
 
