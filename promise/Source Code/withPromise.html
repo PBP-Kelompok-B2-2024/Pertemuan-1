@@ -8,6 +8,8 @@
 <body>
     <h1>Data Produk Dengan Promise</h1>
     <div id="output"></div>
+    <div id="time-promise"></div>
+
     <script>
         function fetchData() {
             // Simulasi pengambilan data dari server
@@ -32,9 +34,16 @@
             output.innerHTML = '<ul>' + data.map(item => `<li>${item}</li>`).join('') + '</ul>';
         }
 
+        const startTime = performance.now();
+        
         fetchData()
             .then(data => processData(data))
             .then(processedData => displayData(processedData))
+            .then(() => {
+                const endTime = performance.now();
+                const executionTime = endTime - startTime;
+                document.getElementById('time-promise').innerText = `Execution Time: ${executionTime.toFixed(2)} ms`;
+            })
             .catch(error => console.error(error));
     </script>
 </body>
