@@ -1,0 +1,3 @@
+Ini adalah isi dari file 3.
+Menggunakan Python untuk membaca file secara blocking dan non-blocking.
+Baris terakhir di file 3.

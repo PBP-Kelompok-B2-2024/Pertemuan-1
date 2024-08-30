@@ -1,0 +1,3 @@
+Ini adalah isi dari file 0.
+File ini digunakan untuk contoh program blocking dan non-blocking.
+Baris terakhir di file 0.
