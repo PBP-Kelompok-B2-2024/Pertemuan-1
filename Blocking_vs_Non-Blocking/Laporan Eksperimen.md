@@ -1,6 +1,7 @@
-# **Meningkatkan performa dan responsivitas aplikasi menggunakan metode Non-Blocking***
-## Penanggung Jawab : Muhammad Hasbi Asshidiqi
-## LinkChatGPT      : https://chatgpt.com/c/6d9fd473-8aec-44a2-8998-23864e04f05d
+# **Meningkatkan performa dan responsivitas aplikasi menggunakan metode Non-Blocking**
+## Tanggal Eksperimen: 30 Agustus 2024
+## Penanggung Jawab  : Muhammad Hasbi Asshidiqi
+## LinkChatGPT       : https://chatgpt.com/c/6d9fd473-8aec-44a2-8998-23864e04f05d
 
 ## 1. Identifikasi Problem:
 Problem Utama: Dalam aplikasi yang memerlukan akses ke sumber daya yang lambat (seperti file, jaringan, atau database), operasi blocking dapat menyebabkan penurunan performa karena program menunggu operasi selesai sebelum melanjutkan. Hal ini membuat aplikasi menjadi tidak efisien, terutama jika banyak tugas harus diselesaikan secara paralel.
