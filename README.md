@@ -35,5 +35,22 @@ Tidak menerapkan asynchronous programming, terutama dalam konteks di mana banyak
 
 - Skalabilitas Terbatas: Program yang hanya menggunakan synchronous programming dapat menghadapi kesulitan dalam menangani banyak permintaan atau proses sekaligus, membatasi kemampuan aplikasi untuk berkembang dan beradaptasi dengan kebutuhan pengguna.
 
+## Eksperimen Yang Dilakukan
+Dari tema besar Asynchronous vs Synchronous programming ini, ada beberapa topik yang kami ambil untuk dilakukan eksperimen ini, diantaranya :
+- setTimeout
+- Try/Catch
+- event handling
+- promise
+- Throttle
+- Race Condition
+- Non-Blocking
+- Event Loop
+- Process.nextTick
+- AbortController
+- Async Function
+- ReactiveX
+- WebSocket
+
+Dengan masing masing topik memiliki studi kasus masing masing yang relevan dengan industri
 ## Penutup
 Dengan memahami perbedaan antara asynchronous dan synchronous programming, serta dampak penerapannya, kita dapat menulis kode yang lebih efisien dan responsif. Eksperimen-eksperimen dalam repository ini bertujuan untuk mendemonstrasikan konsep-konsep ini melalui berbagai contoh dan kasus penggunaan, membantu mahasiswa untuk menguasai teknik-teknik penting dalam pemrograman modern.

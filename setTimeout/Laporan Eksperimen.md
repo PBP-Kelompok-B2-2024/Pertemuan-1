@@ -1,5 +1,5 @@
 # Penggunaan setTimeout dalam Meningkatkan Responsivitas Aplikasi Web
-
+### Tanggal Eksperimen : 29 Agustus 2024
 ### Penanggung Jawab : Adrian Pratama Sasmita
 
 ### Link chatGPT : <https://chatgpt.com/share/c2b92703-6510-4a34-aa1e-c357e57c8749>

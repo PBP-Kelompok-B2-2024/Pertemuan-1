@@ -1,7 +1,7 @@
 # **Penggunaan Process.nextTick dalam operasi pemrosesan data dari database dalam jumlah besar***
-
-## Penanggung Jawab : Muhammad Samudera Bagja
-## Link chatGPT     : https://chatgpt.com/share/84038562-05b6-4d79-a275-1426fd0c756e
+### Tanggal Eksperimen : 29 Agustus 2024
+### Penanggung Jawab : Muhammad Samudera Bagja
+### Link chatGPT     : https://chatgpt.com/share/84038562-05b6-4d79-a275-1426fd0c756e
 
 ### **1. Identifikasi Problem**
 - **Problem:** Pemrosesan data dalam jumlah besar di aplikasi Node.js dapat menyebabkan program menjadi tidak responsif, terutama ketika tugas berat dilakukan dalam satu blok besar tanpa memberi kesempatan kepada event loop untuk menangani tugas-tugas lainnya. Ini mengarah pada kinerja yang buruk dan pengalaman pengguna yang tidak optimal.
