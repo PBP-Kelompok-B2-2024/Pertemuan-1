@@ -44,7 +44,7 @@ Dari tema besar Asynchronous vs Synchronous programming ini, ada beberapa topik 
 - Throttle
 - Race Condition
 - Non-Blocking
-- Event Loop
+- Call Back Hell
 - Process.nextTick
 - AbortController
 - Async Function
