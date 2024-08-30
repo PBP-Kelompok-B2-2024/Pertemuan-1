@@ -1,5 +1,8 @@
-### **Judul Problem**
-Mengatasi Race Condition dalam Penggunaan Asynchronous Operations di Lingkungan Konkurensi
+# Mengatasi Race Condition dalam Penggunaan Asynchronous Operations di Lingkungan Konkurensi
+### Tanggal Eksperimen : 29 Agustus 2024
+### Penanggung Jawab : Faisal Bashri Albir
+
+### Link chatGPT : https://chatgpt.com/c/3aa59a4a-32c1-4ced-a8b3-7ba2647aadbd
 
 ### **Deskripsi Eksperimen**
 Tujuan dari eksperimen ini adalah untuk mengeksplorasi dan mengimplementasikan berbagai teknik yang dapat digunakan untuk mengatasi race condition ketika menggunakan operasi asinkron dalam pengembangan perangkat lunak, khususnya dalam konteks manajemen konkurensi. Eksperimen ini bertujuan untuk membandingkan efektivitas berbagai metode dalam mencegah race condition dan memastikan integritas data saat operasi asinkron berjalan secara paralel.

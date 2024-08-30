@@ -1,6 +1,7 @@
 # **Optimasi Pengambilan dan Pemrosesan Data Produk Menggunakan Promise dalam JavaScript***
-## Penanggung Jawab : Alya Naila Putri Ashadilla
-## Link chatGPT : https://chatgpt.com/share/53fcf0b0-cc90-4f56-999e-07f742bc0fc7
+### Tanggal Eksperimen : 29 Agustus 2024
+### Penanggung Jawab : Alya Naila Putri Ashadilla
+### Link chatGPT : https://chatgpt.com/share/53fcf0b0-cc90-4f56-999e-07f742bc0fc7
 ## **Deskripsi Eksperimen**
 Tujuan dari eksperimen ini adalah untuk mengoptimalkan proses pengambilan dan pemrosesan data produk pada aplikasi web dengan menggunakan promise dalam JavaScript. Eksperimen ini dilakukan untuk membandingkan efisiensi, keterbacaan kode, dan kemampuan penanganan kesalahan antara penggunaan callback tradisional dan promise dalam mengelola operasi asinkron.
 

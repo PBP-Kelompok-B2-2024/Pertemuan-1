@@ -1,4 +1,5 @@
 # Meningkatkan Efisiensi Pemrosesan File Log dalam Aplikasi Server Menggunakan Async Function
+### Tanggal Eksperimen : 24 Agustus 2024
 ### Penanggung Jawab : Muhammad Zaky Aliyashfi
 ### Link chatGPT : https://chatgpt.com/share/06cf056a-607c-42f0-bb36-cac5bed8ac93
 ## Deskripsi Eksperimen

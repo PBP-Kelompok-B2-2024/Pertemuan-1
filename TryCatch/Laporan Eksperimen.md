@@ -1,5 +1,5 @@
 # Penerapan try/catch dalam Penanganan Kesalahan pada Aplikasi JavaScript untuk Meningkatkan Ketangguhan dan Pemeliharaan Kode
-
+### Tanggal Eksperimen : 29 Agustus 2024
 ### Penanggung Jawab : Adrian Pratama Sasmita
 
 ### Link chatGPT : <https://chatgpt.com/share/9509564a-66c2-40fc-9c1a-9c3540e2258e>

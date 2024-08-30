@@ -1,6 +1,8 @@
-### **Judul Problem**
-**Throttling dalam Implementasi Event Listeners untuk Penghematan Sumber Daya pada Aplikasi JavaScript**
+# **Throttling dalam Implementasi Event Listeners untuk Penghematan Sumber Daya pada Aplikasi JavaScript**
+### Tanggal Eksperimen : 29 Agustus 2024
+### Penanggung Jawab : Faisal Bashri Albir
 
+### Link chatGPT : https://chatgpt.com/c/3aa59a4a-32c1-4ced-a8b3-7ba2647aadbd
 ### **Deskripsi Eksperimen**
 Tujuan dari eksperimen ini adalah untuk mengevaluasi efektivitas penerapan throttling pada event listeners dalam sebuah aplikasi JavaScript, khususnya saat menangani event yang sering dipicu, seperti scrolling atau resizing. Eksperimen ini bertujuan untuk membandingkan kinerja aplikasi sebelum dan sesudah penerapan throttling guna mengukur peningkatan efisiensi dan penghematan sumber daya.
 
