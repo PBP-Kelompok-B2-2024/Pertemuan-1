@@ -1,7 +1,3 @@
-Berikut adalah rangkuman untuk laporan eksperimen berdasarkan poin-poin yang telah Anda tentukan:
-
----
-
 ### **Judul Problem**
 **Throttling dalam Implementasi Event Listeners untuk Penghematan Sumber Daya pada Aplikasi JavaScript**
 
