@@ -7,8 +7,8 @@
         .containers {
             display: grid;
             grid-gap: 5px;
-            grid-template-columns: repeat(auto-fit, 1fr);
-            grid-template-rows: repeat(auto-fit, 300px);
+            grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+            grid-template-rows: 400px;
         }
 
         .container {
@@ -36,7 +36,7 @@
 </head>
 
 <body>
-    <div id="videos" class="container">
+    <div id="videos" class="containers">
         <video id="localVideo" class="vid" autoplay muted></video>
     </div>
     <br />
