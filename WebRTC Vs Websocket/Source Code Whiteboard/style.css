@@ -8,3 +8,8 @@ canvas {
     border: 1px solid black;
     margin-top: 20px;
 }
+
+#eraseBtn {
+    display: block;
+    margin: 10px auto;
+}

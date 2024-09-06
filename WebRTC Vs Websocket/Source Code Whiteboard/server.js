@@ -1,31 +1,52 @@
 const WebSocket = require('ws');
-
 const wss = new WebSocket.Server({ port: 8080 });
 
-// Menyimpan koordinat gambar
-let drawingHistory = [];
+// Array untuk menyimpan history gambar
+let drawHistory = [];
 
-wss.on('connection', function connection(ws) {
-    // Kirim history gambar ke user baru
-    ws.send(JSON.stringify({ type: 'history', history: drawingHistory }));
+// Ketika client baru terhubung
+wss.on('connection', (ws) => {
+    console.log('New client connected');
 
-    ws.on('message', function incoming(message) {
+    // Kirim riwayat gambar ke client baru
+    ws.send(JSON.stringify({
+        type: 'history',
+        history: drawHistory
+    }));
+
+    // Ketika server menerima pesan dari client
+    ws.on('message', (message) => {
         const data = JSON.parse(message);
 
-        // Simpan koordinat gambar
-        if (data.type === 'drawing') {
-            drawingHistory.push(data);
+        if (data.type === 'drawing' || data.type === 'startDrawing' || data.type === 'stopDrawing') {
+            // Simpan data gambar ke history
+            drawHistory.push(data);
+
+            // Kirim data gambar ke semua client
+            wss.clients.forEach(client => {
+                if (client.readyState === WebSocket.OPEN) {
+                    client.send(message);
+                }
+            });
         }
 
-        // Broadcast ke semua client
-        wss.clients.forEach(function each(client) {
-            if (client.readyState === WebSocket.OPEN) {
-                client.send(message);
-            }
-        });
+        if (data.type === 'clearCanvas') {
+            // Hapus history ketika canvas dibersihkan
+            drawHistory = [];
+
+            // Kirim pesan clearCanvas ke semua client
+            wss.clients.forEach(client => {
+                if (client.readyState === WebSocket.OPEN) {
+                    client.send(JSON.stringify({ type: 'clearCanvas' }));
+                }
+            });
+        }
     });
 
-    ws.send('Welcome to the online whiteboard!');
+    // Ketika client terputus
+    ws.on('close', () => {
+        console.log('Client disconnected');
+    });
 });
 
-console.log('WebSocket server is running on ws://localhost:8080');
+console.log('Server started on ws://localhost:8080');
